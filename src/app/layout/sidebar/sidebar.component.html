@@ -1,0 +1,33 @@
+<div class="sidenav_container" [@onSideNavChange]="sideNavState ? 'open' : 'close'">
+  <div class="flex-col justify-evenly items-center">
+    <mat-nav-list *ngIf="pages" class="overflow-hidden w-full">
+      <div *ngFor="let page of pages">
+        <a
+          mat-list-item
+          [routerLink]="[page.link]"
+          routerLinkActive="module-active"
+          class="hover:module-active"
+          [routerLinkActiveOptions]="{exact: false}"
+          style="color: rgba(0, 0, 0, 0.54)"
+          [matTooltip]="page.name">
+          <mat-icon fontSet="material-icons-outlined" mat-list-icon>
+            {{ page?.featureIcon }}
+          </mat-icon>
+
+          <div [@animateText]="linkText ? 'show' : 'hide'" style="color: black; font-size: 14px">
+            {{ page.name }}
+          </div>
+        </a>
+      </div>
+    </mat-nav-list>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div class="flex-row justify-start items-center">
+    <button mat-icon-button (click)="onSideNavToggle()" class="pl-5">
+      <mat-icon *ngIf="sideNavState">first_page</mat-icon>
+      <mat-icon *ngIf="!sideNavState">last_page</mat-icon>
+    </button>
+  </div>
+</div>

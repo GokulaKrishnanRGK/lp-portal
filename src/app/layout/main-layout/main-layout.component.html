@@ -1,0 +1,12 @@
+<app-header [sidenav]="leftSidenav" class="flex-col"></app-header>
+
+<mat-sidenav-container class="min-h-screen">
+  <mat-sidenav #leftSidenav mode="side" opened fixedInViewport="true" autoFocus="false">
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+  <mat-sidenav-content
+    [@onMainContentChange]="onSideNavChange ? 'open' : 'close'"
+    class="overflow-hidden">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
