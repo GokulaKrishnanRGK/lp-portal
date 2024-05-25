@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.lpui-toolbar {
+  @apply fixed shadow;
+  z-index: 99;
+  top: 40px;
+  background: #f5f5f0;
+  font-size: 18px;
+  height: 45px !important;
+}
+
+.lp-main-content {
+  padding-top: 45px;
+}

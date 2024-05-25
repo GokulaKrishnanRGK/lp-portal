@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import {FaIconLibrary} from "@fortawesome/angular-fontawesome";
+import {fas} from '@fortawesome/free-solid-svg-icons';
+import {far} from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +12,8 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'lp-portal';
+  title = 'Laydown Analysis';
+  constructor(library: FaIconLibrary) {
+    library.addIconPacks(fas, far);
+  }
 }

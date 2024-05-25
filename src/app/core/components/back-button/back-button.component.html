@@ -1,0 +1,12 @@
+<button
+  *ngIf="!useLocation"
+  mat-icon-button
+  class="-ml-2"
+  [routerLink]="toUrl"
+  [queryParamsHandling]="mergeParams"
+  [queryParams]="params">
+  <mat-icon class="outline-none">arrow_back</mat-icon>
+</button>
+<button mat-icon-button class="" (click)="goBack()" *ngIf="useLocation">
+  <mat-icon class="outline-none">arrow_back</mat-icon>
+</button>

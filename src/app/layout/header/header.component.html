@@ -1,0 +1,22 @@
+<mat-toolbar
+  color="primary"
+  class="mat-elevation-z6 fixed-top-nav"
+  style="background: #1a73e8">
+  <button mat-icon-button aria-label="" class="mr-3" (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="ml-3 px-2 cursor-pointer" routerLink="/app/home">
+    LP Project
+  </span>
+
+  <span class="flex-auto"></span>
+
+  <button
+    mat-mini-fab
+    routerLinkActive="header-active"
+    [routerLink]="['/app/mill-config']"
+    matTooltip="Mill Config"
+    class="hover:header-active">
+    <mat-icon class="material-icons-outlined">tune</mat-icon>
+  </button>
+</mat-toolbar>
