@@ -1,1 +1,77 @@
-<p>new-machine works!</p>
+<mat-toolbar class="ofssui-toolbar px-6">
+  <app-back-button [toUrl]="['/app/settings']"></app-back-button>
+  <span>Planning Mix</span>
+</mat-toolbar>
+
+<div class="w-full 2xl:w-1/2 ofss-main-content">
+  <form class="grid grid-cols-1 gap-2 p-6" [formGroup]="newMachineForm">
+    <app-lp-box title="Machine Details">
+      <app-lp-form-field
+        label="Machine Name"
+        description="Give a unique name for the machine. E.g. Tommy123"
+        [required]="true">
+        <input
+          class="lpui-input"
+          type="text"
+          formControlName="name"
+          placeholder="Enter machine Name"
+          autocomplete="off"/>
+      </app-lp-form-field>
+
+      <app-lp-form-field
+        label="Machine type"
+        description="Machine type"
+        [required]="true">
+        <mat-select formControlName="type">
+          @for (machineType of machineTypes; track machineType) {
+            <mat-option [value]="machineType.valueOf()">{{ machineType }}</mat-option>
+          }
+        </mat-select>
+      </app-lp-form-field>
+
+      <app-lp-form-field
+        label="Machine make"
+        description="Machine make"
+        [required]="true">
+        <mat-select formControlName="make">
+          @for (machineMake of machineMakes; track machineMake) {
+            <mat-option [value]="machineMake.valueOf()">{{ machineMake }}</mat-option>
+          }
+        </mat-select>
+      </app-lp-form-field>
+
+      <app-lp-form-field
+        label="Machine model"
+        description="Machine model"
+        [required]="true">
+        <mat-select formControlName="model">
+          @for (machineModel of machineModels; track machineModel) {
+            <mat-option [value]="machineModel.valueOf()">{{ machineModel }}</mat-option>
+          }
+        </mat-select>
+      </app-lp-form-field>
+
+      <app-lp-form-field
+        label="Machine make year"
+        description="Machine make year"
+        [required]="true">
+        <input
+          class="lp-field"
+          type="number"
+          formControlName="year"
+          placeholder="Year"/>
+      </app-lp-form-field>
+    </app-lp-box>
+
+    <div class="btn-cluster px-6">
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="submitNewMachine()"
+        [disabled]="!newMachineForm.valid">
+        Submit
+      </button>
+      <button mat-stroked-button color="primary" routerLink="../settings">Cancel</button>
+    </div>
+  </form>
+</div>
