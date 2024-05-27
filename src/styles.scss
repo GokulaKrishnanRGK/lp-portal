@@ -1,7 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+:root {
+  --lpui-color-border-input: #aab7b8;
+  --lpui-color-border-focused: #1a73e8;
+  --lpui-color-main: #1a73e8;
+  --lpui-color-black: #252525;
+  --lpui-color-sub: #d1e3fa;
+  --lpui-color-green: #097734;
+
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 .lpui-toolbar {
   @apply fixed shadow;
@@ -14,4 +30,35 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .lp-main-content {
   padding-top: 45px;
+}
+
+.lp-box-container {
+  box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
+  -webkit-box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
+  border-top: 1px solid #eaeded;
+  border-top: 1px solid var(--awsui-color-border-container-top, #eaeded);
+  border-radius: 2px;
+  @apply bg-white w-full;
+}
+
+.lpui-input {
+  border: 1px solid var(--lpui-color-border-input);
+  border-radius: 2px;
+  @apply py-2 w-full px-1 my-1 bg-transparent;
+
+  &:focus {
+    border: 1px solid var(--lpui-color-border-focused, #00a1c9);
+    @apply outline-none;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px var(--lpui-color-border-focused);
+  }
+}
+
+.lp-field {
+  @apply py-2 w-full border px-1 my-1 bg-transparent rounded-md;
+
+  &:focus {
+    @apply outline-none;
+    /*color: var(--ofsui-color-border-focused);*/
+  }
 }

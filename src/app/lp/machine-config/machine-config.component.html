@@ -1,5 +1,11 @@
 <mat-toolbar class="lpui-toolbar px-6">
-  <app-back-button [toUrl]="['/app/settings']"></app-back-button>
+  <app-back-button [toUrl]="['/app/home']"></app-back-button>
   <span>Machine Configuration</span>
 </mat-toolbar>
 
+
+<div class="px-4 pb-4 inline-flex items-center rounded-md">
+  <a [routerLink]="['/app/new-machine']" mat-stroked-button color="primary" href="">
+    New Machine
+  </a>
+</div>
