@@ -1,7 +1,7 @@
-<app-header [sidenav]="leftSidenav" class="flex-col"></app-header>
+<app-header [sidenav]="null" class="flex-col"></app-header>
 
 <mat-sidenav-container class="min-h-screen">
-  <mat-sidenav #leftSidenav mode="side" opened fixedInViewport="true" autoFocus="false">
+  <mat-sidenav #leftSidenav mode="side" fixedInViewport="true" autoFocus="false">
     <app-sidebar></app-sidebar>
   </mat-sidenav>
   <mat-sidenav-content
