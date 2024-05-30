@@ -1,0 +1,21 @@
+<div class="lp-box-container">
+  <div class="border-b ofs-title-bg flex items-center justify-between">
+    <div>
+      <div class="font-medium text-lg">{{ title }}</div>
+      <div class="text-sm text-gray-500" *ngIf="subTitle">{{ subTitle }}</div>
+    </div>
+    <!--<div class="flex space-x-2" *ngIf="actions?.length > 0">
+      <button
+        type="button"
+        *ngFor="let act of actions"
+        mat-stroked-button
+        class="ofsui-button"
+        (click)="callAction(act, $event)">
+        {{ act.label }}
+      </button>
+    </div>-->
+  </div>
+  <div [ngClass]="{'p-4': !noPadding}">
+    <ng-content></ng-content>
+  </div>
+</div>

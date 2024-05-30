@@ -1,0 +1,7 @@
+<div class="mb-2 grid">
+  <mat-label class="font-medium" [ngClass]="{'required-field': required}">{{ label }}</mat-label>
+  <div class="my-2" *ngIf="description">
+    <mat-hint class="">{{ description }}</mat-hint>
+  </div>
+  <ng-content></ng-content>
+</div>
