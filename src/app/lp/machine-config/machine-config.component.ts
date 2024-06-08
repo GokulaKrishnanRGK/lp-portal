@@ -3,6 +3,7 @@ import {BackButtonComponent} from "../../core/components/back-button/back-button
 import {MatToolbar} from "@angular/material/toolbar";
 import {RouterLink} from "@angular/router";
 import {MatAnchor} from "@angular/material/button";
+import {MachinesTableComponent} from "../machines-table/machines-table.component";
 
 @Component({
   selector: 'app-machine-config',
@@ -11,7 +12,8 @@ import {MatAnchor} from "@angular/material/button";
     BackButtonComponent,
     MatToolbar,
     RouterLink,
-    MatAnchor
+    MatAnchor,
+    MachinesTableComponent
   ],
   templateUrl: './machine-config.component.html',
   styleUrl: './machine-config.component.scss'

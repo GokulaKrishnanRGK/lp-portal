@@ -64,6 +64,16 @@ export class SettingsHomeComponent implements OnInit {
         'Manage mill machines'
       )
     );
+    this.settings.push(
+      new AppSetting(
+        2,
+        'Product Configuration',
+        ['far', 'bell'],
+        '',
+        '/app/product-config',
+        'Manage mill products'
+      )
+    );
   }
 
 }

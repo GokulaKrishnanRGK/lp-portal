@@ -1,15 +1,15 @@
 <mat-toolbar class="lpui-toolbar px-6">
   <app-back-button [toUrl]="['/app/settings']"></app-back-button>
-  <span>Machine Configuration</span>
+  <span>Product Configuration</span>
 </mat-toolbar>
 
 
 <div class="px-4 pb-4 inline-flex items-center rounded-md">
-  <a [routerLink]="['/app/new-machine']" mat-stroked-button color="primary" href="">
-    New Machine
+  <a [routerLink]="['/app/new-product']" mat-stroked-button color="primary" href="">
+    New Product
   </a>
 </div>
 
 <div>
-  <app-machines-table></app-machines-table>
+  <app-products-table></app-products-table>
 </div>

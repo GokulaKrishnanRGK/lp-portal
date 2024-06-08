@@ -1,4 +1,4 @@
 export enum MachineModel {
-  MODEL1 = 0,
-  MODEL2 = 1,
+  MODEL1 = "MODEL1",
+  MODEL2 = "MODEL2",
 }

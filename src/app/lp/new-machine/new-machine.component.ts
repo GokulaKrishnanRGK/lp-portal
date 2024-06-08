@@ -64,5 +64,4 @@ export class NewMachineComponent implements OnInit {
     this.machineService.saveMachine(this.newMachineConfig, this.ar);
   }
 
-  protected readonly MachineType = MachineType;
 }

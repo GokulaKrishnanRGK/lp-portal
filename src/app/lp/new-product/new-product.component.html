@@ -1,0 +1,122 @@
+<mat-toolbar class="ofssui-toolbar px-6">
+  <app-back-button [toUrl]="['/app/product-config']"></app-back-button>
+  <span>Create Product</span>
+</mat-toolbar>
+
+<div class="w-full 2xl:w-1/2 ofss-main-content">
+  <form class="grid grid-cols-1 gap-2 p-6" [formGroup]="newProductForm">
+    <app-lp-box title="Product Details">
+      <app-lp-form-field
+        label="Product Name"
+        description="Give a unique name for the product. E.g. Tommy123"
+        [required]="true">
+        <input
+          class="lpui-input"
+          type="text"
+          formControlName="name"
+          placeholder="Enter product Name"
+          autocomplete="off"/>
+      </app-lp-form-field>
+      <app-lp-form-field
+        label="Product description"
+        description="Describe the product"
+        [required]="true">
+        <input
+          class="lpui-input"
+          type="text"
+          formControlName="description"
+          placeholder="Describe the product"
+          autocomplete="off"/>
+      </app-lp-form-field>
+    </app-lp-box>
+    <app-lp-box title="Product Config">
+      <app-lp-form-field
+        label="Yarn Count"
+        description="Yarn Count"
+        [required]="true">
+        <mat-select formControlName="count">
+          @for (yarnCount of countTypes; track yarnCount) {
+            <mat-option [value]="yarnCount.valueOf()">{{ yarnCount }}</mat-option>
+          }
+        </mat-select>
+      </app-lp-form-field>
+
+      <app-lp-form-field
+        label="Material Type"
+        description="Material Type"
+        [required]="true">
+        <mat-select formControlName="materialType">
+          @for (materialType of materialTypes; track materialType) {
+            <mat-option [value]="materialType.valueOf()">{{ materialType }}</mat-option>
+          }
+        </mat-select>
+      </app-lp-form-field>
+
+      <app-lp-form-field
+        label="Process Type"
+        description="Process Type"
+        [required]="true">
+        <mat-select formControlName="processType">
+          @for (processType of processTypes; track processType) {
+            <mat-option [value]="processType.valueOf()">{{ processType }}</mat-option>
+          }
+        </mat-select>
+      </app-lp-form-field>
+
+      <app-lp-form-field
+        label="Blend Type"
+        description="Blend Type"
+        [required]="true">
+        <mat-select formControlName="blendType">
+          @for (blendType of blendTypes; track blendType) {
+            <mat-option [value]="blendType.valueOf()">{{ blendType }}</mat-option>
+          }
+        </mat-select>
+      </app-lp-form-field>
+
+      <app-lp-form-field
+        label="Spinning Tech Type"
+        description="Spinning Tech Type"
+        [required]="true">
+        <mat-select formControlName="spinningTechType">
+          @for (spinningTechType of spinningTechTypes; track spinningTechType) {
+            <mat-option [value]="spinningTechType.valueOf()">{{ spinningTechType }}</mat-option>
+          }
+        </mat-select>
+      </app-lp-form-field>
+
+      <app-lp-form-field
+        label="Enduse Type"
+        description="Enduse Type"
+        [required]="true">
+        <mat-select formControlName="enduseType">
+          @for (enduseType of enduseTypes; track enduseType) {
+            <mat-option [value]="enduseType.valueOf()">{{ enduseType }}</mat-option>
+          }
+        </mat-select>
+      </app-lp-form-field>
+
+      <app-lp-form-field
+        label="Material Blend Type"
+        description="Material Blend Type"
+        [required]="true">
+        <mat-select formControlName="materialBlendType">
+          @for (materialBlendType of materialBlendTypes; track materialBlendType) {
+            <mat-option [value]="materialBlendType.valueOf()">{{ materialBlendType }}</mat-option>
+          }
+        </mat-select>
+      </app-lp-form-field>
+    </app-lp-box>
+
+    <div class="btn-cluster px-6">
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="submitNewProduct()"
+        [disabled]="!newProductForm.valid">
+        Submit
+      </button>
+      <button mat-stroked-button color="primary" routerLink="../settings">Cancel</button>
+    </div>
+  </form>
+</div>
