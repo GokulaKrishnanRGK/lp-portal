@@ -5,7 +5,7 @@ import {LpBoxComponent} from "../../core/components/lp-box/lp-box.component";
 import {LpFormFieldComponent} from "../../core/components/lp-form-field/lp-form-field.component";
 import {MatButton} from "@angular/material/button";
 import {MatOption} from "@angular/material/core";
-import {MatSelect} from "@angular/material/select";
+import {MatFormField, MatLabel, MatSelect} from "@angular/material/select";
 import {MatToolbar} from "@angular/material/toolbar";
 import {ActivatedRoute, RouterLink} from "@angular/router";
 import {NewProduct} from "../../core/models/new.product";
@@ -17,6 +17,9 @@ import {BlendType} from "../../core/constants/blend.type";
 import {SpinningTechType} from "../../core/constants/spinning.tech.type";
 import {EnduseType} from "../../core/constants/enduse.type";
 import {MaterialBlendType} from "../../core/constants/material.blend.type";
+import {MatInput} from "@angular/material/input";
+import {MatCard} from "@angular/material/card";
+import {NgForOf} from "@angular/common";
 
 @Component({
   selector: 'app-new-product',
@@ -31,7 +34,12 @@ import {MaterialBlendType} from "../../core/constants/material.blend.type";
     MatSelect,
     MatToolbar,
     ReactiveFormsModule,
-    RouterLink
+    RouterLink,
+    MatFormField,
+    MatInput,
+    MatLabel,
+    MatCard,
+    NgForOf
   ],
   templateUrl: './new-product.component.html',
   styleUrl: './new-product.component.scss'

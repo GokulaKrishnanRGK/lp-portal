@@ -1,15 +1,21 @@
 <mat-drawer-container class="p-0" hasBackdrop="false">
-
   <div class="lp-main-content">
     <div class="container my-4">
-      <div class="border p-6 my-4 bg-white">
-        <h2>Manage your mill settings</h2>
-        <p>Configure various parameters for the mill and manage mill</p>
-      </div>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Manage your mill settings</mat-card-title>
+          <br>
+          <mat-card-subtitle>Configure various parameters for the mill and manage mill</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+  <div class="lp-main-content">
+    <div class="container my-4">
       <div class="grid grid-cols-4 gap-8">
         <div *ngFor="let setting of settings">
           <div class="p-4 hover:shadow" [routerLink]="setting.url">
             <div class="flex cursor-pointer">
+              <mat-card-actions>
+                <button mat-button>
               <div class="mr-4">
                 <fa-icon [icon]="setting.logo" size="2x"></fa-icon>
               </div>
@@ -17,10 +23,16 @@
                 <div class="font-medium text-gray-700 mb-2">{{ setting.name }}</div>
                 <p class="text-gray-600 w-80 text-sm">{{ setting.subTitle }}</p>
               </div>
+
+              </button>
+              </mat-card-actions>
+              <br>
+              <br>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div></div>
   </div>
 </mat-drawer-container>

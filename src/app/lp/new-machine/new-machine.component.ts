@@ -15,13 +15,22 @@ import {MatOption, MatSelect} from "@angular/material/select";
 import {MachineType} from "../../core/constants/machine.type";
 import {MachineMake} from "../../core/constants/machine.make";
 import {MachineModel} from "../../core/constants/machine.model";
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {NgForOf} from "@angular/common";
+import {MatCardModule} from '@angular/material/card';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 @Component({
   selector: 'app-new-machine',
   standalone: true,
   imports: [
-    MatToolbar,
-    BackButtonComponent,
+    MatToolbar,MatIconModule,MatInputModule,MatFormFieldModule,MatSelectModule,MatSelectModule,NgForOf,MatCardModule,
+    BackButtonComponent,MatTooltipModule,MatButtonModule,MatToolbarModule,
     ReactiveFormsModule,
     LpBoxComponent,
     LpFormFieldComponent,

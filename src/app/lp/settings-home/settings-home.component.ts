@@ -6,6 +6,8 @@ import {RouterLink} from "@angular/router";
 import {FaIconComponent} from "@fortawesome/angular-fontawesome";
 import {BackButtonComponent} from "../../core/components/back-button/back-button.component";
 import {NgForOf} from "@angular/common";
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 
 class AppSetting {
   id: number;
@@ -41,7 +43,9 @@ class AppSetting {
     RouterLink,
     FaIconComponent,
     BackButtonComponent,
-    NgForOf
+    NgForOf,
+    MatCardModule,
+    MatButtonModule
   ],
   templateUrl: './settings-home.component.html',
   styleUrl: './settings-home.component.scss'
