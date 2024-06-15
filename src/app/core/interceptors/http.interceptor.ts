@@ -3,7 +3,7 @@ import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 
 @Injectable()
-export class OfssInterceptor implements HttpInterceptor {
+export class LpInterceptor implements HttpInterceptor {
   intercept(httpRequest: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     // return next.handle(httpRequest);
 

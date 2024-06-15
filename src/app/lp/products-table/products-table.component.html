@@ -7,61 +7,61 @@
     <th mat-header-cell *matHeaderCellDef>
       Name
     </th>
-    <td mat-cell *matCellDef="let product; table: table">{{ product.name }}</td>
+    <td mat-cell *matCellDef="let product;">{{ product.name }}</td>
   </ng-container>
 
   <ng-container matColumnDef="_count">
     <th mat-header-cell *matHeaderCellDef>
       Yarn Count
     </th>
-    <td mat-cell *matCellDef="let product; table: table">{{ product.count }}</td>
+    <td mat-cell *matCellDef="let product;">{{ product.count }}</td>
   </ng-container>
 
   <ng-container matColumnDef="_materialType">
     <th mat-header-cell *matHeaderCellDef>
       Material
     </th>
-    <td mat-cell *matCellDef="let product; table: table">{{ product.materialType }}</td>
+    <td mat-cell *matCellDef="let product;">{{ product.materialType }}</td>
   </ng-container>
 
   <ng-container matColumnDef="_processType">
     <th mat-header-cell *matHeaderCellDef>
       Process
     </th>
-    <td mat-cell *matCellDef="let product; table: table">{{ product.processType }}</td>
+    <td mat-cell *matCellDef="let product;">{{ product.processType }}</td>
   </ng-container>
 
   <ng-container matColumnDef="_blendType">
     <th mat-header-cell *matHeaderCellDef>
       Blend
     </th>
-    <td mat-cell *matCellDef="let product; table: table">{{ product.blendType }}</td>
+    <td mat-cell *matCellDef="let product;">{{ product.blendType }}</td>
   </ng-container>
 
   <ng-container matColumnDef="_spinningTechType">
     <th mat-header-cell *matHeaderCellDef>
       Spinning Tech
     </th>
-    <td mat-cell *matCellDef="let product; table: table">{{ product.spinningTechType }}</td>
+    <td mat-cell *matCellDef="let product;">{{ product.spinningTechType }}</td>
   </ng-container>
 
   <ng-container matColumnDef="_enduseType">
     <th mat-header-cell *matHeaderCellDef>
       Enduse
     </th>
-    <td mat-cell *matCellDef="let product; table: table">{{ product.enduseType }}</td>
+    <td mat-cell *matCellDef="let product;">{{ product.enduseType }}</td>
   </ng-container>
 
   <ng-container matColumnDef="_materialBlendType">
     <th mat-header-cell *matHeaderCellDef>
       Material(s) Blend
     </th>
-    <td mat-cell *matCellDef="let product; table: table">{{ product.materialBlendType }}</td>
+    <td mat-cell *matCellDef="let product;">{{ product.materialBlendType }}</td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="columnDefs"></tr>
   <tr
-      mat-row
-      *matRowDef="let row; columns: columnDefs; table: table"
-      class="hover:bg-neutral-100 cursor-pointer outline-none"></tr>
+    mat-row
+    *matRowDef="let row; columns: columnDefs;"
+    class="hover:bg-neutral-100 cursor-pointer outline-none"></tr>
 </table>

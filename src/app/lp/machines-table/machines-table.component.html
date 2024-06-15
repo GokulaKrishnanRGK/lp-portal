@@ -7,41 +7,41 @@
     <th mat-header-cell *matHeaderCellDef>
       Name
     </th>
-    <td mat-cell *matCellDef="let machine; table: table">{{ machine.name }}</td>
+    <td mat-cell *matCellDef="let machine;">{{ machine.name }}</td>
   </ng-container>
 
   <ng-container matColumnDef="_make">
     <th mat-header-cell *matHeaderCellDef>
       Make
     </th>
-    <td mat-cell *matCellDef="let machine; table: table">{{ machine.make }}</td>
+    <td mat-cell *matCellDef="let machine;">{{ machine.make }}</td>
   </ng-container>
 
   <ng-container matColumnDef="_model">
     <th mat-header-cell *matHeaderCellDef>
       Model
     </th>
-    <td mat-cell *matCellDef="let machine; table: table">{{ machine.model }}</td>
+    <td mat-cell *matCellDef="let machine;">{{ machine.model }}</td>
   </ng-container>
 
   <ng-container matColumnDef="_year">
     <th mat-header-cell *matHeaderCellDef>
       Year
     </th>
-    <td mat-cell *matCellDef="let machine; table: table">{{ machine.year }}</td>
+    <td mat-cell *matCellDef="let machine;">{{ machine.year }}</td>
   </ng-container>
 
   <ng-container matColumnDef="_type">
     <th mat-header-cell *matHeaderCellDef>
       Type
     </th>
-    <td mat-cell *matCellDef="let machine; table: table">{{ machine.type }}</td>
+    <td mat-cell *matCellDef="let machine;">{{ machine.type }}</td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="columnDefs"></tr>
   <tr
-      mat-row
-      *matRowDef="let row; columns: columnDefs; table: table"
-      class="hover:bg-neutral-100 cursor-pointer outline-none"></tr>
+    mat-row
+    *matRowDef="let row; columns: columnDefs;"
+    class="hover:bg-neutral-100 cursor-pointer outline-none"></tr>
 </table>
 

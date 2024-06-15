@@ -1,5 +1,5 @@
 <div class="lp-box-container">
-  <div class="border-b ofs-title-bg flex items-center justify-between">
+  <div class="border-b lp-title-bg flex items-center justify-between">
     <div>
       <div class="font-medium text-lg">{{ title }}</div>
       <div class="text-sm text-gray-500" *ngIf="subTitle">{{ subTitle }}</div>
@@ -9,7 +9,7 @@
         type="button"
         *ngFor="let act of actions"
         mat-stroked-button
-        class="ofsui-button"
+        class="lpui-button"
         (click)="callAction(act, $event)">
         {{ act.label }}
       </button>
