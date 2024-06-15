@@ -1,7 +1,7 @@
 <table
-  mat-table
-  #table="matTable"
-  [dataSource]="machines">
+    mat-table
+    #table="matTable"
+    [dataSource]="machines">
 
   <ng-container matColumnDef="_name">
     <th mat-header-cell *matHeaderCellDef>
@@ -40,8 +40,8 @@
 
   <tr mat-header-row *matHeaderRowDef="columnDefs"></tr>
   <tr
-    mat-row
-    *matRowDef="let row; columns: columnDefs; table: table"
-    class="hover:bg-neutral-100 cursor-pointer outline-none"></tr>
+      mat-row
+      *matRowDef="let row; columns: columnDefs; table: table"
+      class="hover:bg-neutral-100 cursor-pointer outline-none"></tr>
 </table>
 

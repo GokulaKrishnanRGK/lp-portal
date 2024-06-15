@@ -29,8 +29,8 @@ import {MatToolbarModule} from "@angular/material/toolbar";
   selector: 'app-new-machine',
   standalone: true,
   imports: [
-    MatToolbar,MatIconModule,MatInputModule,MatFormFieldModule,MatSelectModule,MatSelectModule,NgForOf,MatCardModule,
-    BackButtonComponent,MatTooltipModule,MatButtonModule,MatToolbarModule,
+    MatToolbar, MatIconModule, MatInputModule, MatFormFieldModule, MatSelectModule, MatSelectModule, NgForOf, MatCardModule,
+    BackButtonComponent, MatTooltipModule, MatButtonModule, MatToolbarModule,
     ReactiveFormsModule,
     LpBoxComponent,
     LpFormFieldComponent,

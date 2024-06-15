@@ -1,7 +1,7 @@
 <table
-  mat-table
-  #table="matTable"
-  [dataSource]="products">
+    mat-table
+    #table="matTable"
+    [dataSource]="products">
 
   <ng-container matColumnDef="_name">
     <th mat-header-cell *matHeaderCellDef>
@@ -61,7 +61,7 @@
 
   <tr mat-header-row *matHeaderRowDef="columnDefs"></tr>
   <tr
-    mat-row
-    *matRowDef="let row; columns: columnDefs; table: table"
-    class="hover:bg-neutral-100 cursor-pointer outline-none"></tr>
+      mat-row
+      *matRowDef="let row; columns: columnDefs; table: table"
+      class="hover:bg-neutral-100 cursor-pointer outline-none"></tr>
 </table>

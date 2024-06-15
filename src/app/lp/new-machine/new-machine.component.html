@@ -2,68 +2,73 @@
   <app-back-button [toUrl]="['/app/machine-config']"></app-back-button>
   <span>Planning Mix</span>
 </mat-toolbar>
-  <form [formGroup]="newMachineForm">
-<mat-card class="mat-eg">
-  <app-lp-form-field [required]="true">
-  <div style="margin: 10px">
-      <mat-form-field>
-        <mat-label>Machine Name:</mat-label>
-        <input type="text" autocomplete="off" formControlName="name" matInput placeholder="Enter machine name:">
-      </mat-form-field>
-  </div>
-  </app-lp-form-field>
+<form [formGroup]="newMachineForm">
+  <mat-card class="mat-eg">
+    <app-lp-form-field [required]="true">
+      <div style="margin: 10px">
+        <mat-form-field>
+          <mat-label>Machine Name:</mat-label>
+          <input type="text" autocomplete="off" formControlName="name" matInput
+                 placeholder="Enter machine name:">
+        </mat-form-field>
+      </div>
+    </app-lp-form-field>
 
-  <app-lp-form-field [required]="true">
-  <div style="margin: 10px">
-    <mat-form-field appearance="fill">
-      <mat-label>Type:</mat-label>
-      <mat-select formControlName="type">
-        @for (machineType of machineTypes; track machineType) {
-          <mat-option [value]="machineType.valueOf()">{{ machineType }}</mat-option>
-        }
-      </mat-select>
-    </mat-form-field>
-  </div>
-  </app-lp-form-field>
-  <app-lp-form-field [required]="true">
-  <div style="margin: 10px">
-    <mat-form-field appearance="fill">
-      <mat-label>Make:</mat-label>
-      <mat-select formControlName="make">
-        @for (machineMake of machineMakes; track machineMake) {
-          <mat-option [value]="machineMake.valueOf()">{{ machineMake }}</mat-option>
-        }
-      </mat-select>
-    </mat-form-field>
-  </div>
-  </app-lp-form-field>
-  <app-lp-form-field [required]="true">
-  <div style="margin: 10px">
-    <mat-form-field appearance="fill">
-      <mat-label>Model:</mat-label>
-      <mat-select formControlName="model">
-        @for (machineModel of machineModels; track machineModel) {
-          <mat-option [value]="machineModel.valueOf()">{{ machineModel }}</mat-option>
-        }
-      </mat-select>
-    </mat-form-field>
-  </div>
-  </app-lp-form-field>
-  <app-lp-form-field [required]="true">
-  <div style="margin: 10px">
-    <p>
-      <mat-form-field>
-        <mat-label>Make:</mat-label>
-        <input type="number" class="lp-field" formControlName="year" matInput placeholder="Enter machine year:">
-      </mat-form-field>
-    </p>
-  </div>
-  </app-lp-form-field>
-  <section>
-  <div class="example-button-row">
-  <button class="bt1" (click)="submitNewMachine()" [disabled]="!newMachineForm.valid" mat-flat-button color="dodgerblue">SUBMIT</button>
-  <button class="bt1" mat-flat-button color="dodgerblue" routerLink="../settings">Cancel</button>
-  </div>
-  </section>
-</mat-card>
+    <app-lp-form-field [required]="true">
+      <div style="margin: 10px">
+        <mat-form-field appearance="fill">
+          <mat-label>Type:</mat-label>
+          <mat-select formControlName="type">
+            @for (machineType of machineTypes; track machineType) {
+              <mat-option [value]="machineType.valueOf()">{{ machineType }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </app-lp-form-field>
+    <app-lp-form-field [required]="true">
+      <div style="margin: 10px">
+        <mat-form-field appearance="fill">
+          <mat-label>Make:</mat-label>
+          <mat-select formControlName="make">
+            @for (machineMake of machineMakes; track machineMake) {
+              <mat-option [value]="machineMake.valueOf()">{{ machineMake }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </app-lp-form-field>
+    <app-lp-form-field [required]="true">
+      <div style="margin: 10px">
+        <mat-form-field appearance="fill">
+          <mat-label>Model:</mat-label>
+          <mat-select formControlName="model">
+            @for (machineModel of machineModels; track machineModel) {
+              <mat-option [value]="machineModel.valueOf()">{{ machineModel }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </app-lp-form-field>
+    <app-lp-form-field [required]="true">
+      <div style="margin: 10px">
+        <p>
+          <mat-form-field>
+            <mat-label>Make:</mat-label>
+            <input type="number" class="lp-field" formControlName="year" matInput
+                   placeholder="Enter machine year:">
+          </mat-form-field>
+        </p>
+      </div>
+    </app-lp-form-field>
+    <section>
+      <div class="example-button-row">
+        <button class="bt1" (click)="submitNewMachine()" [disabled]="!newMachineForm.valid"
+                mat-flat-button color="dodgerblue">SUBMIT
+        </button>
+        <button class="bt1" mat-flat-button color="dodgerblue" routerLink="../settings">Cancel
+        </button>
+      </div>
+    </section>
+  </mat-card>
 </form>

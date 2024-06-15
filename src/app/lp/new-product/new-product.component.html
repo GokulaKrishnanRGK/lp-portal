@@ -17,14 +17,14 @@
     </app-lp-form-field>
 
     <app-lp-form-field [required]="true">
-    <div style="margin: 10px">
-      <p>
-        <mat-form-field>
-          <mat-label>Product Description:</mat-label>
-          <input type="text" matInput placeholder="Enter Product Description:">
-        </mat-form-field>
-      </p>
-    </div>
+      <div style="margin: 10px">
+        <p>
+          <mat-form-field>
+            <mat-label>Product Description:</mat-label>
+            <input type="text" matInput placeholder="Enter Product Description:">
+          </mat-form-field>
+        </p>
+      </div>
     </app-lp-form-field>
 
     <app-lp-form-field [required]="true">
@@ -84,10 +84,10 @@
         <mat-form-field appearance="fill">
           <mat-label>Spinning Tech Type:</mat-label>
           <mat-select formControlName="spinningTechType">
-          @for (spinningTechType of spinningTechTypes; track spinningTechType) {
-            <mat-option [value]="spinningTechType.valueOf()">{{ spinningTechType }}</mat-option>
-          }
-        </mat-select>
+            @for (spinningTechType of spinningTechTypes; track spinningTechType) {
+              <mat-option [value]="spinningTechType.valueOf()">{{ spinningTechType }}</mat-option>
+            }
+          </mat-select>
         </mat-form-field>
       </div>
     </app-lp-form-field>
@@ -120,8 +120,11 @@
 
     <section>
       <div class="example-button-row">
-        <button class="bt1" (click)="submitNewProduct()" [disabled]="!newProductForm.valid" mat-flat-button color="dodgerblue">SUBMIT</button>
-        <button class="bt1" mat-flat-button color="dodgerblue" routerLink="../settings">Cancel</button>
+        <button class="bt1" (click)="submitNewProduct()" [disabled]="!newProductForm.valid"
+                mat-flat-button color="dodgerblue">SUBMIT
+        </button>
+        <button class="bt1" mat-flat-button color="dodgerblue" routerLink="../settings">Cancel
+        </button>
       </div>
     </section>
 

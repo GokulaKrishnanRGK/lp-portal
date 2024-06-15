@@ -18,12 +18,12 @@ class AppSetting {
   subTitle: string;
 
   constructor(
-    id: number,
-    name: string,
-    logo: [IconPrefix, IconName],
-    type: string,
-    url: string,
-    subTitle: string
+      id: number,
+      name: string,
+      logo: [IconPrefix, IconName],
+      type: string,
+      url: string,
+      subTitle: string
   ) {
     this.id = id;
     this.name = name;
@@ -59,24 +59,24 @@ export class SettingsHomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.settings.push(
-      new AppSetting(
-        1,
-        'Machine Configuration',
-        ['far', 'bell'],
-        '',
-        '/app/machine-config',
-        'Manage mill machines'
-      )
+        new AppSetting(
+            1,
+            'Machine Configuration',
+            ['far', 'bell'],
+            '',
+            '/app/machine-config',
+            'Manage mill machines'
+        )
     );
     this.settings.push(
-      new AppSetting(
-        2,
-        'Product Configuration',
-        ['far', 'bell'],
-        '',
-        '/app/product-config',
-        'Manage mill products'
-      )
+        new AppSetting(
+            2,
+            'Product Configuration',
+            ['far', 'bell'],
+            '',
+            '/app/product-config',
+            'Manage mill products'
+        )
     );
   }
 
