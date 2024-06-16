@@ -63,6 +63,11 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "LpPortal:build:local",
+            "sslKey": "F:\\sriwijaya-textech\\config\\certs\\thelocaltiger_key.pem",
+            "sslCert": "F:\\sriwijaya-textech\\config\\certs\\thelocaltiger_cert.pem"
+          },
           "configurations": {
             "production": {
               "buildTarget": "lp-portal:build:production"

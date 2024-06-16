@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "build:local": "ng serve --ssl=true --port 9877 --disable-host-check",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "hserve": "http-server -p 9877 -c-1 dist/LpPortal -S -C F:\\sriwijaya-textech\\config\\certs\\thelocaltiger_cert.pem -K F:\\sriwijaya-textech\\config\\certs\\thelocaltiger_key.pem"
   },
   "private": true,
   "dependencies": {
